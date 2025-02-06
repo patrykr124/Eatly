@@ -35,6 +35,7 @@ const HomeScreen = () => {
       name
     },
     dishes[]->{
+      _id,
       name,
       price,
       description

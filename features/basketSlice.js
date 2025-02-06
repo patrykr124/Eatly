@@ -32,10 +32,20 @@ export const basketSlice = createSlice({
   },
 });
 
+export const selectedBasketItems = (state) => state.basket.items;
+
 export const selectedBasketItemsQuantity = (state, id) => {
   const clickItem = state.basket.items.find((item) => item.id === id);
   return clickItem ? clickItem.quantity : 0;
 };
+
+export const selectedBasketAllItemsQuantity = (state) => {
+  const all = state.basket.items.reduce((total, item) => (total + item.quantity), 0);
+  return all;
+}
+
+export const selectedBasketItemsTotal = (state) =>
+  state.basket.items.reduce((total, item) => (total + item.price * item.quantity), 0);
 
 export const { addToBasket, removeFromBasket } = basketSlice.actions;
 

@@ -2,7 +2,7 @@ import { ScrollView, Text, View } from "react-native";
 import { ArrowRightIcon } from "react-native-heroicons/outline";
 import RestaurantCard from "./RestaurantCard";
 const FeaturedRow = ({ title, description, restaurants }) => {
- 
+
   return (
     <View className="px-2">
       <View className="mt-4 flex-row items-center justify-between ">
@@ -21,7 +21,7 @@ const FeaturedRow = ({ title, description, restaurants }) => {
           <RestaurantCard
             key={restaurant._id}
             id={restaurant._id}
-            imgUrl={restaurant.image}s
+            imgUrl={restaurant.image}
             title={restaurant.name}
             rating={restaurant.rating}
             genre={restaurant.category?.name}
